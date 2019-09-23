@@ -1,0 +1,10 @@
+﻿  StaticTest.cpp
+StaticTest.obj : error LNK2001: unresolved external symbol "public: static int PaddleClass::m_MinX" (?m_MinX@PaddleClass@@2HA)
+StaticTest.obj : error LNK2001: unresolved external symbol "public: static int PaddleClass::m_MaxX" (?m_MaxX@PaddleClass@@2HA)
+StaticTest.obj : error LNK2001: unresolved external symbol "public: static int PaddleClass::m_MinY" (?m_MinY@PaddleClass@@2HA)
+StaticTest.obj : error LNK2001: unresolved external symbol "public: static int PaddleClass::m_MaxY" (?m_MaxY@PaddleClass@@2HA)
+StaticTest.obj : error LNK2001: unresolved external symbol "public: static int BallClass::m_MinX" (?m_MinX@BallClass@@2HA)
+StaticTest.obj : error LNK2001: unresolved external symbol "public: static int BallClass::m_MaxX" (?m_MaxX@BallClass@@2HA)
+StaticTest.obj : error LNK2001: unresolved external symbol "public: static int BallClass::m_MinY" (?m_MinY@BallClass@@2HA)
+StaticTest.obj : error LNK2001: unresolved external symbol "public: static int BallClass::m_MaxY" (?m_MaxY@BallClass@@2HA)
+C:\Users\jamie\Documents\C++ things\StaticTest\Debug\StaticTest.exe : fatal error LNK1120: 8 unresolved externals
