@@ -3,35 +3,36 @@ using namespace std;
 // * is deference
 // & the address of variable
 
-void passByValue(int x);
-void passByReference(int* x);
+int passByValue(int x);
+void passByReference(int &x);
 
 int main()
 {
-	int fish = 5;
-	int dog = 0;
-	int* address;
-	address = &fish; //memory address of fish
-	dog = *address; //dog contains the value of the memory address of fish
-	cout << dog << endl; //dog should be equal to fish (so 5)
+	int v = 13;
+	int r = 13;
+	
+	passByReference(r);
 
-	int value = 13;
-	int reference = 13;
-
-	passByValue(value);
-	passByReference(&reference);
-
-	cout << "value is: " << value << endl;
-	cout << "reference is: " << reference << endl;
+	cout << "value is: " << passByValue(v) << endl;
+	cout << "reference is: " << r << endl;
 
 }
 
-void passByValue(int x) //Pass copy. X is a copy of value variable
+int passByValue(int x) //Pass copy. X is a copy of value variable. Essentially creating a new variable called x
 {
-	x = 99;
+	return x + x;
 }
 
-void passByReference(int* x) //Take memory address of variable and directly change it
+void passByReference(int &x) //Take memory address of variable and directly change it. int &x is a reference variable of r variable. Meaning x  and r are connected
 {
-	*x = 66;
+	x = x + x;
 }
+
+
+
+/*int fish = 5;
+int dog = 0;
+int* address;
+address = &fish; //memory address of fish
+dog = *address; //dog contains the value of the memory address of fish
+cout << dog << endl; //dog should be equal to fish (so 5)*/
