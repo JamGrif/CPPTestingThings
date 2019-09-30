@@ -10,12 +10,10 @@ int main()
 {
 	int v = 13;
 	int r = 13;
-	
 	passByReference(r);
 
 	cout << "value is: " << passByValue(v) << endl;
 	cout << "reference is: " << r << endl;
-
 }
 
 int passByValue(int x) //Pass copy. X is a copy of value variable. Essentially creating a new variable called x
@@ -28,11 +26,22 @@ void passByReference(int &x) //Take memory address of variable and directly chan
 	x = x + x;
 }
 
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+void raddition(int& dab) //Refrence
+{
+	dab = dab + dab;
+}
 
+int vaddition(int dab) //value
+{
+	return dab + dab;
+}
 
-/*int fish = 5;
-int dog = 0;
-int* address;
-address = &fish; //memory address of fish
-dog = *address; //dog contains the value of the memory address of fish
-cout << dog << endl; //dog should be equal to fish (so 5)*/
+void Oldmain()
+{
+	int rx = 5;
+	int vx = 5;
+	raddition(rx);
+	cout << "rx is equal to " << rx << endl;
+	cout << "vx is equal to " << vaddition(vx) << endl;
+}
